@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-MAINTAINER Alexander Schenkel <alex@alexi.ch>
+FROM ubuntu
+MAINTAINER Lenya Pugachev <lenyapugachev@me.com>
 
 VOLUME ["/var/www"]
 
@@ -11,12 +11,14 @@ RUN apt-get update && \
       php7.0-cli \
       libapache2-mod-php7.0 \
       php7.0-gd \
+      php7.0-dom \
       php7.0-json \
       php7.0-ldap \
+      php7.0-hash \
       php7.0-mbstring \
-      php7.0-mysql \
-      php7.0-pgsql \
-      php7.0-sqlite3 \
+      php7.0-mcrypt \
+      php7.0-curl \
+      php7.0-redis \
       php7.0-xml \
       php7.0-xsl \
       php7.0-zip \
@@ -27,5 +29,5 @@ COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
 
-EXPOSE 80
+EXPOSE 443
 CMD ["/usr/local/bin/run"]
