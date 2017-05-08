@@ -14,11 +14,9 @@ RUN apt-get update && \
       php7.0-dom \
       php7.0-json \
       php7.0-ldap \
-      php7.0-hash \
       php7.0-mbstring \
       php7.0-mcrypt \
       php7.0-curl \
-      php7.0-redis \
       php7.0-xml \
       php7.0-xsl \
       php7.0-zip \
